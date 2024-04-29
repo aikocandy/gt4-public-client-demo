@@ -2,8 +2,8 @@
  * @Description: 中间页
  * @Version: 1.0.0
  * @Date: 2022-05-25 17:16:26
- * @LastEditors: Yawen Yang
- * @LastEditTime: 2022-06-24 16:27:01
+ * @LastEditors: yawen Yang
+ * @LastEditTime: 2024-04-29 17:11:57
  */
 import { View, StyleSheet, Platform, Dimensions } from 'react-native';
 import React, { PureComponent } from 'react';
@@ -44,7 +44,7 @@ export default class WebviewDemo extends PureComponent<any,any> {
     }
   }
   render() {
-    let sources = (Platform.OS === 'android' ? 'file:///android_asset/' : 'http://localhost:8081/') + `Static.bundle/demo.html?data=`+encodeURIComponent(`{"captchaId":"54088bb07d2df3c46b79f80300b0abbe","protocol":"https://"}`) ;
+    let sources = 'http://localhost:8081/assets/demo.html?data='+encodeURIComponent(`{"captchaId":"xxxxxxxxxxxxxxxx","protocol":"https://"}`) ;
     //页面加载完成触发
     const webViewOnLoad = (syntheticEvent: { nativeEvent: any; }) => {
       const {nativeEvent} = syntheticEvent;
